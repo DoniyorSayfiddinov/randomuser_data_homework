@@ -1,4 +1,4 @@
-import get_data
+from get_data import  get_data as get
 
 def get_count_users(data:dict) -> int:
     """
@@ -9,4 +9,6 @@ def get_count_users(data:dict) -> int:
     Returns:
         int: number of users
     """
-    
+    return data["info"]["results"]
+data=get("randomuser_data.json")
+print(get_count_users(data))
